@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # load the csv file
-df = pd.read_csv('cleaned_dataframe.csv')
+df = pd.read_csv('dupli_cleaned_df.csv')
 print(df)
 
 # clean 'country' column(strip spaces, title case, fix misspellings)
@@ -31,5 +31,5 @@ print("Changed country inconsistencies:",df['country'].unique())
 print("Changed gender inconsistencies:",df['gender'].unique())
 
 # Saving the cleaned data to a new file
-df.to_csv("cleaned_dataframe_1.csv", index=False)
-print("Saved the data to cleaned_dataframe_1.csv")
+df.to_csv("typo_cleaned_df.csv", index=False)
+print("Saved the data to typo_cleaned_df.csv")

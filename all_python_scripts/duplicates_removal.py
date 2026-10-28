@@ -1,7 +1,7 @@
 import pandas as pd 
 
 # Loading the Dataset(CSV File)
-df = pd.read_csv("bank_customers_synthetic_dirty (copy).csv")
+df = pd.read_csv("original_data/bank_customers_synthetic_dirty (copy).csv")
 print(df)
 
 # Check for TRUE duplicates(Identical across all cols)
@@ -9,8 +9,20 @@ true_duplicates = df[df.duplicated(keep = False)].sort_values(by='customer_id')
 print("True Duplicates:", len(true_duplicates))
 
 # Drop redundant duplicate rows and keep only one copy of first occurence
-df_non_redundant = df.drop_duplicates(keep ='first').copy()
+df_non_redundant = df.drop_duplicates(keep ='first').copy().reset_index(drop=True)
 print("Rows after removing true duplicates:",len(df_non_redundant))
+
+# In the main series,customer_id should be 20000001 + row index
+# If a row's ID repeated the previous row's ID due to a sequence lag, then resync it
+
+expected_id = 20000001 + df_non_redundant.index
+
+# Find which rows have a mistake
+wrong_id_rows = (df_non_redundant.index < 10000) & (df_non_redundant['customer_id'] != expected_id)
+print("Sequencing errors found:", wrong_id_rows.sum())
+
+# Go only to the rows where wrong_id_rows is True and look only at the customer_id column and rest leave it untouched
+df_non_redundant.loc[wrong_id_rows, "customer_id"] = expected_id[wrong_id_rows]
 
 # Check for False Duplicates (Same id but different data, id collision)
 false_duplicates = df_non_redundant[df_non_redundant.duplicated(subset=["customer_id"], keep = False)].sort_values(by='customer_id')
@@ -29,5 +41,5 @@ print("Final clean Records:", len(df_clean))
 true_duplicates.to_csv("true_duplicates.csv", index=False)
 false_duplicates.to_csv("false_duplicates.csv", index=False)
 df_clean.to_csv("dupli_cleaned_df.csv", index=False)
-print("Saved true_duplicates, false_duplicates, and cleaned_dataframe successfully!")
+print("Saved true_duplicates, false_duplicates, and dupli_cleaned_df successfully!")
 

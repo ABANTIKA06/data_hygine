@@ -2,7 +2,7 @@ import pandas as pd
 
 
 # Loading the dataset
-df = pd.read_csv("/home/abantika/Documents/abantika_projects/data hygine/imputed_cleaned_df.csv")
+df = pd.read_csv("imputed_cleaned_df.csv")
 print("the number of rows existing:", len(df))
 print(df)
 
@@ -43,4 +43,9 @@ print("Final summary statistics:",df.describe())
 output_path = "verification_cleared.csv"
 df.to_csv(output_path,index=False)
 print("Successfully exported the final dataset to:",output_path)
+
+# To check both original_data_clean.csv = Final_verification_cleared.csv
+# Load the original clean file
+ori_clean_df = pd.read_csv("original_data/bank_customers_synthetic_clean.csv")
+print("Are both verification file and original clean file identical:",df.equals(ori_clean_df))
 
