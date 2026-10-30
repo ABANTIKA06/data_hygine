@@ -1,0 +1,25 @@
+harlequin -a postgres "postgres://postgres:271800@localhost:5432/practise"
+
+Harlequin is an SQL IDE for terminal
+
+my-user = postgres
+my-pass = 271800
+my-database = practise(current database you are working)
+
+ctrl+ J = To run query in Harlequin
+
+
+# Import to SQL process(attribute mapping)
+
+1. Suppose you created a database name Customers inside Bank_Detail(db)-> public schema-> customer table t
+
+2. Create same column as in your cleaned  CSV file consists of  
+
+3. COPY target_table_name (column1, column2, column3)
+   FROM '/absolute/path/to/your/file.csv' 
+   DELIMITER ',' 
+   CSV HEADER;
+
+
+
+

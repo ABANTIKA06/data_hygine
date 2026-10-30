@@ -15,15 +15,10 @@ This project processes dirty, synthetic banking data and transforms it into an a
 ## 📂 Project Structure
 ```
 ├── all_python_scripts/
-│   ├── duplicates_removal.py
-│   ├── typo_cleaning.py
-│   ├── numeric_cleaning.py
-│   ├── business_rules_cleaning.py
-│   ├── imputation_cleaning.py
-│   └── verification_export.py
-├── original_data/               # Raw input datasets
-├── cleaned_data.csv             # Final verified cleaned dataset
-├── data_cleaning_roadmap.md     # Detailed pipeline documentation
+│   └── clean_all.py                 # Unified end-to-end data hygiene pipeline
+├── original_data/                   # Raw input datasets
+├── verification_cleared.csv         # Final verified cleaned dataset (10,000 records)
+├── data_cleaning_roadmap.md         # Detailed pipeline documentation
 └── imputation_interview_cheatsheet.md
 ```
 
@@ -33,11 +28,6 @@ This project processes dirty, synthetic banking data and transforms it into an a
 git clone git@github.com:ABANTIKA06/data_hygine.git
 cd data_hygine
 
-# Run the cleaning pipeline scripts
-python3 all_python_scripts/duplicates_removal.py
-python3 all_python_scripts/typo_cleaning.py
-python3 all_python_scripts/numeric_cleaning.py
-python3 all_python_scripts/business_rules_cleaning.py
-python3 all_python_scripts/imputation_cleaning.py
-python3 all_python_scripts/verification_export.py
+# Run the unified cleaning pipeline script
+python3 all_python_scripts/clean_all.py
 ```

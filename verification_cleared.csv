@@ -2591,6 +2591,7 @@ customer_id,credit_score,country,gender,age,tenure,balance,products_number,credi
 20002590,657,France,Female,46,8,0.0,1,1,1
 20002591,750,France,Male,30,4,182065.85,2,0,0
 20002592,752,France,Male,35,2,120961.5,2,0,1
+20002593,732,Spain,Female,34,4,61825.5,1,1,1
 20002594,599,France,Male,39,9,112727.06,1,1,0
 20002595,685,Spain,Female,49,8,141223.68,1,1,1
 20002596,655,France,Male,24,5,113220.2,2,1,1
@@ -3143,6 +3144,7 @@ customer_id,credit_score,country,gender,age,tenure,balance,products_number,credi
 20003143,696,France,Male,35,5,0.0,2,1,0
 20003144,529,Germany,Female,25,4,0.0,1,0,1
 20003145,501,Spain,Female,34,6,0.0,2,1,0
+20003146,815,Spain,Female,48,5,126436.29,2,1,1
 20003147,793,Germany,Male,33,1,119152.1,2,0,1
 20003148,637,France,Male,31,6,0.0,1,1,1
 20003149,684,France,Female,42,7,125879.29,1,1,0
@@ -5320,6 +5322,7 @@ customer_id,credit_score,country,gender,age,tenure,balance,products_number,credi
 20005321,643,France,Female,39,2,154712.58,2,0,1
 20005322,701,France,Female,42,6,0.0,2,0,0
 20005323,596,Spain,Male,46,3,62092.9,1,0,1
+20005324,748,France,Male,32,8,0.0,1,1,1
 20005325,608,Germany,Male,38,5,0.0,2,1,0
 20005326,716,Germany,Female,37,7,155417.61,1,1,0
 20005327,677,France,Female,27,10,121325.84,2,1,0
@@ -6683,6 +6686,7 @@ customer_id,credit_score,country,gender,age,tenure,balance,products_number,credi
 20006685,738,France,Female,38,4,145166.09,1,1,0
 20006686,613,France,Female,31,4,127216.31,2,1,0
 20006687,768,Germany,Male,55,5,0.0,2,1,0
+20006688,678,Spain,Female,35,10,0.0,1,0,0
 20006689,532,France,Male,32,8,125647.36,1,0,0
 20006690,709,Spain,Male,28,3,132576.25,2,0,1
 20006691,634,France,Female,46,7,0.0,1,1,1
@@ -8122,6 +8126,7 @@ customer_id,credit_score,country,gender,age,tenure,balance,products_number,credi
 20008125,579,France,Female,49,3,0.0,1,1,0
 20008126,685,Spain,Female,24,5,128468.69,2,1,1
 20008127,647,France,Male,52,8,110939.3,1,1,0
+20008128,562,Spain,Female,37,5,122031.55,1,1,1
 20008129,423,France,Male,49,9,78128.13,1,1,0
 20008130,765,France,Female,64,8,138053.79,2,1,1
 20008131,591,France,Male,30,3,127637.92,1,1,1
@@ -9479,6 +9484,7 @@ customer_id,credit_score,country,gender,age,tenure,balance,products_number,credi
 20009483,606,France,Male,57,4,0.0,2,1,0
 20009484,696,Spain,Male,34,4,0.0,2,1,0
 20009485,635,Germany,Male,39,5,92316.31,2,1,1
+20009486,584,France,Male,32,6,114169.16,1,1,0
 20009487,732,Germany,Female,32,6,130233.14,1,1,0
 20009488,551,Spain,Female,30,2,0.0,2,1,1
 20009489,708,Germany,Male,49,8,109327.65,1,1,1
